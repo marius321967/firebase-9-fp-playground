@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  dev:
+    image: node:18
+    working_dir: /app
+    command: tail -f /dev/null
+    volumes:
+      - ./:/app
+    restart: unless-stopped
+    networks: 
+      - fb-test
+  firebase:
+    image: firebase-emulator
+    build: 
+      context: ./
+      dockerfile: emulator.Dockerfile
+    environment:
+      - FIREBASE_TOKEN
+    volumes:
+      - ./:/app
+    networks:
+      fb-test:
+        # Bug: Firebase requires a three-level domain in order not to throw an error even when connecting to Emulator
+        aliases:
+          - my.local.firebase
+    command: firebase emulators:start
+
+networks:
+  fb-test:
