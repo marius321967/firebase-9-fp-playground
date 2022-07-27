@@ -5,7 +5,7 @@ Requirements:
 - VS Code with the [Remote Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) plugin
 
 ## Setting up
-- `git clone`
+- `git clone git@github.com:marius321967/firebase-9-fp-playground.git`
 - `docker-compose up -d`. You are now running an idle Node 18 container & Firebase Emulator.
 - VS Code: _Attach to Running Container..._ -> _dev_
 - `cd` into `fb8/` or `fb9/`
