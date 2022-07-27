@@ -1,0 +1,16 @@
+{
+  "name": "firebase-currying-9",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "marius321967 <marius.dras@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha firebase.spec.js"
+  },
+  "dependencies": {
+    "chai": "^4.3.6",
+    "firebase": "9",
+    "lodash": "^4.17.21",
+    "mocha": "^10.0.0"
+  }
+}
