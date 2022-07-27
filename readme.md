@@ -12,3 +12,5 @@ Requirements:
 - `yarn install`
 - Play arround with `firebase.spec.js`
 - `yarn test`
+
+Tested on Ubuntu. Docker for Windows may or may not have issues.
